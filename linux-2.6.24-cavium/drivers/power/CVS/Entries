@@ -1,0 +1,12 @@
+/Kconfig/1.1.1.1/Thu Mar 11 21:08:28 2010//
+/Makefile/1.1.1.1/Thu Mar 11 21:08:28 2010//
+/apm_power.c/1.1.1.1/Thu Mar 11 21:08:28 2010//
+/ds2760_battery.c/1.1.1.1/Thu Mar 11 21:08:28 2010//
+/olpc_battery.c/1.1.1.1/Thu Mar 11 21:08:28 2010//
+/pda_power.c/1.1.1.1/Thu Mar 11 21:08:28 2010//
+/pmu_battery.c/1.1.1.1/Thu Mar 11 21:08:28 2010//
+/power_supply.h/1.1.1.1/Thu Mar 11 21:08:28 2010//
+/power_supply_core.c/1.1.1.1/Thu Mar 11 21:08:28 2010//
+/power_supply_leds.c/1.1.1.1/Thu Mar 11 21:08:28 2010//
+/power_supply_sysfs.c/1.1.1.1/Thu Mar 11 21:08:28 2010//
+D

@@ -1,0 +1,15 @@
+/Kconfig/1.1.1.1/Thu Mar 11 21:07:23 2010//
+/Makefile/1.1.1.1/Thu Mar 11 21:07:23 2010//
+/base.h/1.1.1.1/Thu Mar 11 21:07:23 2010//
+/card.c/1.1.1.1/Thu Mar 11 21:07:23 2010//
+/core.c/1.1.1.1/Thu Mar 11 21:07:23 2010//
+/driver.c/1.1.1.1/Thu Mar 11 21:07:23 2010//
+/interface.c/1.1.1.1/Thu Mar 11 21:07:23 2010//
+/manager.c/1.1.1.1/Thu Mar 11 21:07:23 2010//
+/quirks.c/1.1.1.1/Thu Mar 11 21:07:23 2010//
+/resource.c/1.1.1.1/Thu Mar 11 21:07:23 2010//
+/support.c/1.1.1.1/Thu Mar 11 21:07:23 2010//
+/system.c/1.1.1.1/Thu Mar 11 21:07:23 2010//
+D/isapnp////
+D/pnpacpi////
+D/pnpbios////

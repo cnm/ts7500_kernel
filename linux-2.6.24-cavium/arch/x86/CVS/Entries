@@ -1,0 +1,27 @@
+/Kconfig/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/Kconfig.cpu/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/Kconfig.debug/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/Makefile/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/Makefile_32/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/Makefile_32.cpu/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/Makefile_64/1.1.1.1/Thu Mar 11 21:07:14 2010//
+D/boot////
+D/configs////
+D/crypto////
+D/ia32////
+D/kernel////
+D/lguest////
+D/lib////
+D/mach-default////
+D/mach-es7000////
+D/mach-generic////
+D/mach-visws////
+D/mach-voyager////
+D/math-emu////
+D/mm////
+D/oprofile////
+D/pci////
+D/power////
+D/vdso////
+D/video////
+D/xen////

@@ -1,0 +1,23 @@
+/asix.c/1.1.1.1/Thu Mar 11 21:07:24 2010//
+/catc.c/1.1.1.1/Thu Mar 11 21:07:24 2010//
+/cdc_ether.c/1.1.1.1/Thu Mar 11 21:07:24 2010//
+/cdc_subset.c/1.1.1.1/Thu Mar 11 21:07:24 2010//
+/dm9601.c/1.1.1.1/Thu Mar 11 21:07:24 2010//
+/gl620a.c/1.1.1.1/Thu Mar 11 21:07:24 2010//
+/kaweth.c/1.1.1.1/Thu Mar 11 21:07:24 2010//
+/kawethfw.h/1.1.1.1/Thu Mar 11 21:07:24 2010//
+/mcs7830.c/1.1.1.1/Thu Mar 11 21:07:24 2010//
+/net1080.c/1.1.1.1/Thu Mar 11 21:07:24 2010//
+/pegasus.c/1.1.1.1/Thu Mar 11 21:07:24 2010//
+/pegasus.h/1.1.1.1/Thu Mar 11 21:07:24 2010//
+/plusb.c/1.1.1.1/Thu Mar 11 21:07:24 2010//
+/rndis_host.c/1.1.1.1/Thu Mar 11 21:07:24 2010//
+/rtl8150.c/1.1.1.1/Thu Mar 11 21:07:24 2010//
+/usbnet.c/1.1.1.1/Thu Mar 11 21:07:24 2010//
+/zaurus.c/1.1.1.1/Thu Mar 11 21:07:24 2010//
+/Kconfig/1.2/Tue Mar 30 21:21:30 2010//
+/Makefile/1.2/Tue Mar 30 21:21:30 2010//
+/smsc95xx.h/1.1/Tue Mar 30 23:44:44 2010//
+/smsc95xx.c/1.3/Mon Apr  5 23:16:32 2010//
+/usbnet.h/1.2/Fri Apr  2 21:01:31 2010//
+D

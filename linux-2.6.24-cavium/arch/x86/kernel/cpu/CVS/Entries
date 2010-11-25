@@ -1,0 +1,18 @@
+/Makefile/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/addon_cpuid_features.c/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/amd.c/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/bugs.c/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/centaur.c/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/common.c/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/cpu.h/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/cyrix.c/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/intel.c/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/intel_cacheinfo.c/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/nexgen.c/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/perfctr-watchdog.c/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/proc.c/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/transmeta.c/1.1.1.1/Thu Mar 11 21:07:14 2010//
+/umc.c/1.1.1.1/Thu Mar 11 21:07:14 2010//
+D/cpufreq////
+D/mcheck////
+D/mtrr////
