@@ -28,6 +28,7 @@ vmlinux*
 System.map
 Module.symvers
 !.gitignore
+!.config
 
 #
 # Generated include files
