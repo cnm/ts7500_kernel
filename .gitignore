@@ -1,0 +1,5 @@
+.config.old
+.missing-syscalls.d
+.tmp_versions/
+.version
+Module.symvers
