@@ -192,7 +192,7 @@ SUBARCH := $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ \
 
 ARCH		?= arm
 #CROSS_COMPILE	?= arm-linux-
-CROSS_COMPILE	?= arm-unknown-linux-gnu-
+CROSS_COMPILE	?= ../crosstool/arm-unknown-linux-gnu/bin/arm-unknown-linux-gnu-
 
 # Architecture as present in compile.h
 UTS_MACHINE 	:= $(ARCH)
