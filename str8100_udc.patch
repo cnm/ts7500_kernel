@@ -1,0 +1,65 @@
+--- a/drivers/usb/gadget/str8100_udc.c	2010-04-27 16:48:15.000000000 -0400
++++ b/drivers/usb/gadget/str8100_udc.c	2010-11-10 12:46:25.000000000 -0500
+@@ -259,7 +259,7 @@
+ /*-------------------------------------------------------------------------*/
+ 
+ static struct usb_request *
+-FTC_alloc_request(struct usb_ep *_ep, int gfp_flags)
++FTC_alloc_request(struct usb_ep *_ep, gfp_t gfp_flags)
+ {
+ 	struct FTC_request *req;
+ 
+@@ -974,7 +974,7 @@
+ }
+ 
+ static int
+-FTC_queue(struct usb_ep *_ep, struct usb_request *_req, int gfp_flags)
++FTC_queue(struct usb_ep *_ep, struct usb_request *_req, gfp_t gfp_flags)
+ {
+ 	struct FTC_request *req;
+ 	struct FTC_ep *ep;
+@@ -1754,7 +1754,7 @@
+ 	if (!dev)
+ 		return -ENODEV;
+ 	if (driver->speed != USB_SPEED_HIGH ||
+-	    !driver->bind || !driver->unbind || !driver->disconnect || !driver->setup)
++	    !driver->bind || !driver->unbind || !driver->disconnect || !driver->setup || !driver->suspend || !driver->resume)
+ 		return -EINVAL;
+ 	if (dev->driver)
+ 		return -EBUSY;
+@@ -1892,6 +1892,8 @@
+ 	// Go Suspend status
+ 	mUsbIntSuspClr();
+ 
++	dev->driver->suspend(&dev->gadget);
++
+ 	//Bruce;;mUsbGoSuspend();
+ 	//dev->ep0state = EP0_SUSPEND;
+ }
+@@ -1914,6 +1916,7 @@
+ 	mUsbIntResmClr();
+ 
+ 	dev->ep0state = EP0_IDLE;
++	dev->driver->resume(&dev->gadget);
+ }
+ 
+ ///////////////////////////////////////////////////////////////////////////////
+@@ -2843,7 +2846,7 @@
+ }
+ 
+ static irqreturn_t
+-FTC_irq(int irq, void *_dev, struct pt_regs *r)
++FTC_irq(int irq, void *_dev)
+ {
+ 	struct FTC_udc *dev = _dev;
+ 	u32 handled = 0;
+@@ -2975,7 +2978,8 @@
+ {
+ 	INFO(dev, "remove USB device Lower driver\n");
+ 
+-	return FTC_usb_remove();
++	if (the_controller)
++		FTC_usb_remove();
+ }
+ 
+ module_exit(cleanup);
