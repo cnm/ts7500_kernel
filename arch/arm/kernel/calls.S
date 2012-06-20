@@ -362,6 +362,11 @@
 /* 350 */	CALL(sys_timerfd)
 		CALL(sys_eventfd)
 		CALL(sys_fallocate)
+        CALL(sys_ni_syscall)
+        CALL(sys_miavitasetseconds)
+/* 355 */  CALL(sys_miavitameansyscall)
+        CALL(sys_miavitasyscall)
+
 #ifndef syscalls_counted
 .equ syscalls_padding, ((NR_syscalls + 3) & ~3) - NR_syscalls
 #define syscalls_counted
