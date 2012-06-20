@@ -9,3 +9,7 @@ make ts7500_defconfig
 make
 make modules
 make modules_install
+
+=====================================================
+
+Version: linux-2.6.24-cavium_source_jun082011.tar.gz
