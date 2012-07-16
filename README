@@ -5,7 +5,8 @@ ftp://ftp.embeddedarm.com/ts-arm-sbc/ts-7500-linux/sources/
 
 Then:
 
-make ts7500_defconfig
+# make ts7500_defconfig #Removed as .config is included in the git repo (YOU NO LONGER NEED TO DO IT)
+
 make
 make modules
 make modules_install
