@@ -11,8 +11,10 @@ EXPORT_SYMBOL(__miavita_elapsed_usecs);
 
 void init_miavita_xtime(void){
     struct timeval t;
+    /* Get the current kernel time */
     do_gettimeofday(&t);
     printk("FIRST MICROS %ld\n", t.tv_usec);
+    /* Save the current usec that have passed in the second */
     __miavita_elapsed_usecs = t.tv_usec;
     printk("STORED MICROS %lld\n", __miavita_elapsed_usecs);
 }
