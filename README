@@ -137,3 +137,49 @@ In ipc/miavita_syscall.c:
       __miavita_elapsed_secs = secs;
       return 0;
     }
+
+
+Joao Gomes' alterations were:
+============================
+
+In ipc/miavita_syscall.c:
+
+    void pulse_miavita_xtime(void){
+      struct timeval t;
+      struct timespec ts;
+  
+      do_gettimeofday(&t);
+
+
+      ts.tv_sec = t.tv_sec;
+      /* Reset the nsec because there is a new second */
+      ts.tv_nsec = 0;
+  
+      do_settimeofday(&ts);
+  
+      __miavita_elapsed_secs++;
+    }
+
+    asmlinkage int sys_miavitasetseconds(struct timeval __user * gps_time){
+      struct timeval kernel_time;
+      struct timespec new_kernel_time;
+
+      do_gettimeofday(&kernel_time);
+      if(((uint64_t) kernel_time.tv_usec - (uint64_t) (*gps_time).tv_usec) < 350){
+        printk(KERN_DEBUG "Cannot set seconds, maximum delay not respected.\n");
+	/* Indicate that the supplied data is not inside the required interval */
+	return -EINVAL;
+      }
+
+      new_kernel_time.tv_sec = (*gps_time).tv_sec;
+      new_kernel_time.tv_nsec = 0;
+      /* Use the kernel to keep the usec for the samples up to date */
+      do_settimeofday(&new_kernel_time);
+
+      __miavita_elapsed_secs = (uint64_t) (*gps_time).tv_sec;
+      return 0;
+    }
+
+In include/linux/syscalls.h:
+
+    asmlinkage int sys_miavitasetseconds(struct timeval __user * gps_time);
