@@ -10,7 +10,8 @@ EXPORT_SYMBOL(__miavita_elapsed_secs);
 EXPORT_SYMBOL(__miavita_elapsed_usecs);
 
 /**
- * @brief Initiates the miavita counters in the kernel
+ * @brief Initiates the miavita sec counter to the seconds in the kernel time
+ * (not to be used by miavita)
  */
 void init_miavita_xtime(void){
     struct timeval t;
@@ -86,7 +87,7 @@ asmlinkage int sys_miavitasyscall(uint64_t __user * res){
  *
  * @param res
  *
- * @return 
+ * @return
  */
 asmlinkage int sys_miavitameansyscall(uint64_t __user * res){
     unsigned long ret;
@@ -103,6 +104,7 @@ asmlinkage int sys_miavitameansyscall(uint64_t __user * res){
 
 /**
  * @brief Sets the seconds in the miavita seconds variable
+ * (TODO - Shouldn't this check if it is at the beginning of the seconds)
  *
  * @param secs to set
  *
