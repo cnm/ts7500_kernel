@@ -69,8 +69,9 @@ asmlinkage int sys_miavitasyscall(uint64_t __user * res){
       t.tv_usec += 1000000;
 
     check = __miavita_elapsed_secs * 1000000 + (( (uint64_t)t.tv_usec ) - __miavita_elapsed_usecs) ;
-    if(check < 0)
+    if(check < 0) {
       printk(KERN_EMERG "Don't know how but i'm returnning a negative value %lld = %llu + (%llu - %llu)\n", check, __miavita_elapsed_secs * 1000000, (uint64_t)t.tv_usec, __miavita_elapsed_usecs);
+      }
 
     ret = copy_to_user(res, &check, sizeof(uint64_t));
     if(ret)
